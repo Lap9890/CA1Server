@@ -14,6 +14,8 @@ public class CA1Server {
 
     public static void main(String[] args) {
 
+        /* START SERVER E CONNESSIONE CLIENT
+        
         try {
             System.out.println("Waiting for client");
             ServerSocket ss = new ServerSocket(9806);
@@ -29,6 +31,6 @@ public class CA1Server {
         } catch (Exception e) {
             System.out.println(e);
         }
-
+*/ 
     }
 }
