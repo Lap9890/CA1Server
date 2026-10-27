@@ -6,6 +6,7 @@ package com.mycompany.ca1server;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.io.*;
+import java.util.*;
 /**
  *
  * @author lapi
@@ -32,5 +33,20 @@ public class CA1Server {
             System.out.println(e);
         }
 */ 
+        
+        Ticket t1 = new Ticket("Anna","network","WIFI");
+        Ticket t2 = new Ticket("Francesoc","general","other");
+      
+        
+        HashMap<String, String> tickets = new HashMap<>();
+        tickets.put(t1.getTickedId(),t1.toString());
+        tickets.put(t2.getTickedId(),t2.toString());
+        
+        
+     
+        for (String i : tickets.values()) {
+            System.out.println(i);
+        }
+        
     }
 }
