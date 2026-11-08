@@ -34,19 +34,24 @@ public class CA1Server {
         }
 */ 
         
-        Ticket t1 = new Ticket("Anna","network","WIFI");
-        Ticket t2 = new Ticket("Francesoc","general","other");
+        Ticket t1 = new Ticket("T101","alice","network","Wifi disconnect");
+        //Ticket t2 = new Ticket();
       
         
-        HashMap<String, String> tickets = new HashMap<>();
-        tickets.put(t1.getTickedId(),t1.toString());
-        tickets.put(t2.getTickedId(),t2.toString());
+        
+        
+        
+        LinkedHashMap<String, Ticket> tickets = new LinkedHashMap<>();
+        tickets.put(t1.getTicketId(),t1);
+      
         
         
      
-        for (String i : tickets.values()) {
-            System.out.println(i);
+        for (Ticket i : tickets.values()) {
+            System.out.println(i.toString());
         }
         
     }
 }
+
+
