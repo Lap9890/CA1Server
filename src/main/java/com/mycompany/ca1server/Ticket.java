@@ -9,34 +9,40 @@ package com.mycompany.ca1server;
  * @author lapi
  */
 public class Ticket {
-    private String ticketId;
-    private String studentName;
-    private String category;
-    private String description;
-    static  int count = 0;
-    
-    {
-    count +=1;
-    }
-    
-    public Ticket(String studentName,String category,String description){
-        
-        String Temp = "T" + count;
-        this.ticketId = Temp;
-        this.studentName = studentName;
+
+    final private String ticketId;
+     final private String studentName;
+    final private String category;
+    final private String description;
+
+    public Ticket(String ticket, String studentName, String category, String description) {
         this.category = category;
         this.description = description;
-           
-        }
-    
-    public String getTickedId(){
-        return this.ticketId;
+        this.studentName = studentName;
+
+        this.ticketId = ticket;
     }
-    
-    public String toString(){
-    
-        return ticketId + "-" + category+ "-"+ description;
+
+    public String getTicketId() {
+        return ticketId;
     }
-    
-    
+
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    @Override
+    public String toString() {
+
+        return ticketId + " - " + category + " - " + description;
+    }
+
 }
